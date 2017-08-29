@@ -85,15 +85,7 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public void add(int index, E element) {
-	        // TODO: fill this in
-	        // takes an index and stores the new value at the given index
-	        if (index == 0) {
-		        head = new Node(element, head);
-		} else {
-		        Node prev = getNode(index - 1);
-			prev.next = new Node(element, prev.next);
-		}
-		size++;
+		// TODO: fill this in
 	}
 
 	@Override
@@ -154,14 +146,7 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public int indexOf(Object target) {
-	       // TODO: fill this in
-	        Node node = head;
-		int index = 0;
-		while (node != null) {
-		        if (equals(target, node.cargo)) return index;
-		        index++;
-			node = node.next;
-		}
+		// TODO: fill this in
 		return -1;
 	}
 
@@ -217,28 +202,13 @@ public class MyLinkedList<E> implements List<E> {
 	@Override
 	public boolean remove(Object obj) {
 		// TODO: fill this in
-	        // takes the element that should be removed and returns a boolean
-	        int removeIndex = indexOf(obj);
-		if (removeIndex != -1) {
-		        remove(removeIndex);
-			return true;
-		}
 		return false;
 	}
 
 	@Override
 	public E remove(int index) {
 		// TODO: fill this in
-	        // takes the index of the element that should be removed and returns the element
-	        E element = get(index);
-		if (index == 0) {
-		        head = head.next;
-		} else {
-		        Node node = getNode(index - 1);
-		        node.next = node.next.next;
-		}
-		size--;
-		return element;
+		return null;
 	}
 
 	@Override
